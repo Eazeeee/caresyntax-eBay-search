@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ebayWork" >
+    <test name="eBayAssignment" >
+
+        <classes>
+            <class name="tests.SearchTests" />
+           
+        </classes>
+
+    </test>
+
+</suite>

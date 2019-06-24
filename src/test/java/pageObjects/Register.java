@@ -37,8 +37,13 @@ public class Register {
     @FindBy(xpath = "//b[@class=\"gh-eb-arw gh-sprRetina\"]")
     public WebElement profileArrow;
 
+    @FindBy(xpath = "//*[@class=\"gh-eb-arw gh-sprRetina\"]")
+    public WebElement logoutMenu;
+
     @FindBy(xpath = "//a[text()=\'Sign Out\']")
     public WebElement logoutLink;
+
+
 
 
 

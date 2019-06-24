@@ -1,3 +1,4 @@
+/*
 package tests;
 
 import org.openqa.selenium.By;
@@ -9,7 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pageObjects.BaseProperties;
-import pageObjects.Checkout;
+import pageObjects.SearchFilter;
 import pageObjects.Login;
 
 import java.util.List;
@@ -32,19 +33,21 @@ public class LoginTests {
         driver.get(BaseProperties.ebayURL);
     }
 
-    /*@AfterTest
+    */
+/*@AfterTest
     public static void postTest(){
 
         driver.close();
         driver.quit();
-    }*/
+    }*//*
+
 
 
     @Test(priority = 2)
     public void loginTest() {
 
         Login session = new Login(driver);
-        Checkout cart = new Checkout(driver);
+        SearchFilter cart = new SearchFilter(driver);
         session.SignInlink.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@id=\"GREET-SIGN-IN-TO-EBAY\"]")));
         //  session.usernameField.sendKeys(BaseProperties.email);
@@ -83,10 +86,11 @@ public class LoginTests {
 
 
 
-   /* @Test
+   */
+/* @Test
     public void searchTests(){
 
-        Checkout cart = new Checkout(driver);
+        SearchFilter cart = new SearchFilter(driver);
         cart.searchBox.sendKeys("Intel NUC");
         cart.searchButton.click();
 
@@ -94,8 +98,10 @@ public class LoginTests {
 
 
     }
+*//*
+
+
+    }
+    }
+
 */
-
-    }
-    }
-
