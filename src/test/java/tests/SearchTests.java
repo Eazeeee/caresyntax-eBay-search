@@ -74,7 +74,6 @@ public class SearchTests {
         registration.passwordField.sendKeys(passW);
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@id='ppaFormSbtBtn']")));
         registration.registerButton.click();
-       // wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()=\' Daily Deals\']")));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()=\' My eBay\']")));
 
         // Go to My eBay and get the UserID
@@ -85,27 +84,13 @@ public class SearchTests {
         //Save the ID in an array.
         answers.add(ebayID);
         System.out.println(answers);
-        //registration.logoutMenu.click();
-        //registration.logoutLink.click();
+
     }
 
     @Test(priority = 2)
     public void LoginTest() {
 
-        Login session = new Login(driver);
         SearchFilter filterSearch = new SearchFilter(driver);
-        driver.get(BaseProperties.ebayURL);
-        //Sign into eBay
-        session.SignInlink.click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@id=\"GREET-SIGN-IN-TO-EBAY\"]")));
-        session.usernameField.sendKeys(BaseProperties.email);
-        session.pwordField.sendKeys(BaseProperties.password);
-        //session.usernameField.sendKeys("hDPN@GwbV.com");
-        //session.pwordField.sendKeys("oZyf23");
-        session.signInButton.click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()=\' My eBay\']")));
-       // session.myEbaylink.click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class=\"page-name\"]")));
 
         //Search for an item and add the result count to the array
         String search = "Intel NUC";
